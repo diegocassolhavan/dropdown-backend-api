@@ -14,8 +14,8 @@ app.add_middleware(
 )
 
 # Data
-VALID_NUMBERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-VALID_LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+VALID_NUMBERS = [1, 2, 3, 4, 5]
+VALID_LETTERS = ["a", "b", "c", "d", "e"]
 
 # Models
 class SelectionRequest(BaseModel):
