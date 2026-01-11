@@ -9,8 +9,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -36,6 +36,12 @@ class SelectionResponse(BaseModel):
 @app.get("/")
 def root():
     return {"message": "Dropdown Backend API"}
+
+@app.options("/api/numbers")
+@app.options("/api/letters")
+@app.options("/api/selection")
+def options_handler():
+    return {"status": "ok"}
 
 @app.get("/api/numbers")
 def get_numbers():
