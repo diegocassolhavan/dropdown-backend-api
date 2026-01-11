@@ -45,7 +45,7 @@ def options_handler():
 
 @app.get("/api/numbers")
 def get_numbers():
-    return {"numbers": VALID_NUMBERS}
+    return {"numbers": VALID_NUMBERS, "version": "v3-updated"}
 
 @app.get("/api/letters")
 def get_letters():
